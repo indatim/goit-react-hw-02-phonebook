@@ -41,7 +41,7 @@ class App extends Component {
 
     if (contacts.find(contact => contact.name === name)) {
       Report.warning(
-        'Warning',
+        'Warning!',
         `${name} is already in contacts.`,
         'Okay'
       );
@@ -49,7 +49,7 @@ class App extends Component {
     }
 
     if (contacts.find(contact => contact.number === number)) {
-      Report.warning('Warning', `${number} is already in contacts.`, 'Okay');
+      Report.warning('Warning!', `${number} is already in contacts.`, 'Okay');
       return;
     }
 
@@ -62,7 +62,7 @@ class App extends Component {
     this.setState(({ contacts }) => ({
       contacts: [newContact, ...contacts],
     }));
-    Report.success('Success', 'New contact has been added', 'Okay');
+    Report.success('Success', 'New contact has been added!', 'Okay');
   };
 
   changeFilter = ({ target }) => {
