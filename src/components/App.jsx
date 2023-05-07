@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
+import { Report } from 'notiflix/build/notiflix-report-aio';
 
 import { Container, PhonebookHeader, ContactsHeader } from './App.styled';
 
@@ -39,18 +40,12 @@ class App extends Component {
   addContact = (name, number) => {
     const { contacts } = this.state;
 
-    if (name === '') {
-      alert(`Введите, пожалуйста, имя контакта.`);
-      return;
-    }
-
-    if (number === '') {
-      alert(`Введите, пожалуйста, номер телефона контакта.`);
-      return;
-    }
-
     if (contacts.find(contact => contact.name === name)) {
-      alert(`${name} is already in contacts.`);
+      Report.warning(
+        'Warning',
+        `${name} is already in contacts.`,
+        'Okay'
+      );
       return;
     }
 
