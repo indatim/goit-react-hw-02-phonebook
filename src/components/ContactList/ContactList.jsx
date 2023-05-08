@@ -13,12 +13,12 @@ const ContactList = ({ contacts, onDeleteContact }) => (
       <ContactListItem key={id}>
         <ContactListText>{name}:</ContactListText>
         <ContactListText>{number}</ContactListText>
-        <ConractListButton
+        <ContactListButton
           type="button"
           onClick={() => onDeleteContact(id)}
         >
           Delete
-        </ConractListButton>
+        </ContactListButton>
       </ContactListItem>
     ))}
   </ContactListContainer>
