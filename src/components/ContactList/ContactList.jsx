@@ -4,7 +4,7 @@ import {
   ContactListContainer,
   ContactListItem,
   ContactListText,
-  ConractListButton,
+  ContactListButton,
 } from './ContactList.styled';
 
 const ContactList = ({ contacts, onDeleteContact }) => (
