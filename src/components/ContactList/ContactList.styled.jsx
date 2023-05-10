@@ -20,7 +20,7 @@ export const ContactListText = styled.span`
   margin-right: 10px;
 `;
 
-export const ConractListButton = styled.button`
+export const ContactListButton = styled.button`
   padding: 5px;
   font-size: 14px;
   text-transform: capitalize;
